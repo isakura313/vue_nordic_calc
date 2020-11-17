@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="code.js" defer></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model применяется для двустороннего связывания данных -->
+        <input type="text" v-model="x">
+        <input type="text" v-model="y">
+        <br/>
+        <!-- v-text которая значение result вставит в виде
+        содержимого тега -->
+        <div class="result" v-text="result"></div>
+        <!-- v-on директива Vue, которая может принимать
+        события и вызывать специальные методы экземпляра -->
+        <button v-on:click="mult">*</button>
+        <button v-on:click="division">/</button>
+        
+        <div class="result" v-text="res"></div>
+    </div>
+</body>
+</html>
